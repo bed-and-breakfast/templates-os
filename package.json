@@ -1,17 +1,17 @@
 {
-  "name": "@bed-and-breakfast/templates-base",
-  "version": "0.0.0",
-  "description": "Bed & Breakfast Base Template [REPLACE ME]",
+  "name": "@bed-and-breakfast/templates-open-source",
+  "version": "0.0.1",
+  "description": "Bed & Breakfast Open Source Template [REPLACE ME]",
   "author": "Bed & Breakfast",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bed-and-breakfast/templates-base.git"
+    "url": "https://github.com/bed-and-breakfast/templates-open-source.git"
   },
-  "homepage": "https://github.com/bed-and-breakfast/templates-base",
-  "bugs": "https://github.com/bed-and-breakfast/templates-base/issues",
+  "homepage": "https://github.com/bed-and-breakfast/templates-open-source",
+  "bugs": "https://github.com/bed-and-breakfast/templates-open-source/issues",
   "keywords": [],
   "private": false,
   "main": "dist/index.js",
