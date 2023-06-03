@@ -2,8 +2,8 @@ name: CI
 on:
   push:
 jobs:
-  publish:
-    name: CI
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -12,4 +12,20 @@ jobs:
           node-version: '18.x'
       - run: npm ci --ignore-scripts
       - run: npm run build
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - run: npm ci --ignore-scripts
       - run: npm test
+  coverage:
+    name: Upload coverage reports to Codecov
+    env:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    steps:
+      - uses: codecov/codecov-action@v3
+
