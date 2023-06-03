@@ -1,6 +1,6 @@
 {
   "name": "@bed-and-breakfast/templates-open-source",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bed & Breakfast Open Source Template [REPLACE ME]",
   "author": "Bed & Breakfast",
   "publishConfig": {
@@ -49,7 +49,11 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "coverageReporters": ["html", "text", "cobertura"],
+    "coverageReporters": [
+      "html",
+      "text",
+      "cobertura"
+    ],
     "testEnvironment": "node"
   }
 }
