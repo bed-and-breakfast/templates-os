@@ -20,13 +20,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-      - run: npm ci --ignore-scripts
-      - run: npm test -- --coverage
-  coverage:
-    name: Upload coverage reports to Codecov
-    runs-on: ubuntu-latest
-    env:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-    steps:
-      - uses: codecov/codecov-action@v3
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Test (With Coverage)
+        run: npm test -- --coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+          env:
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
