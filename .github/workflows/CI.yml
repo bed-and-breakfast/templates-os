@@ -24,6 +24,7 @@ jobs:
       - run: npm test
   coverage:
     name: Upload coverage reports to Codecov
+    runs-on: ubuntu-latest
     env:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     steps:
