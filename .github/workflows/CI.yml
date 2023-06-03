@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm ci --ignore-scripts
-      - run: npm test
+      - run: npm test -- --coverage
   coverage:
     name: Upload coverage reports to Codecov
     runs-on: ubuntu-latest
