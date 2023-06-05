@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
-          with:
-            name: test-coverage
-            path: coverage
+        with:
+          name: test-coverage
+          path: coverage
       - name: Create coverage report
         uses: 5monkeys/cobertura-action@master
         with:

@@ -6,7 +6,6 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:yml/standard",
         "airbnb-base",
         "airbnb-typescript/base",
         "prettier"
@@ -14,10 +13,11 @@
     "parserOptions": {
         "project": "./tsconfig.json"
     },
-    "overrides": [
+    "overrides" : [
         {
             "files": ["*.yaml", "*.yml"],
-            "parser": "yaml-eslint-parser"
+            "plugins": ["yaml"],
+            "extends": ["plugin:yaml/recommended"]
         }
     ],
     "rules": {
