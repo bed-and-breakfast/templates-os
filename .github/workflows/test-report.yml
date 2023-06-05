@@ -8,11 +8,6 @@ jobs:
   report:
     name: Test Report
     runs-on: ubuntu-latest
-    permissions:
-      checks: write
-      contents: write
-      pull-requests: write
-      statuses: write
     steps:
       - name: Create test report
         uses: dorny/test-reporter@v1

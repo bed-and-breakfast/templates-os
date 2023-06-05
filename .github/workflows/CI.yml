@@ -45,7 +45,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: success() || failure() # run this step even if previous step failed
         with:
-          name: coverage
-          path: coverage/index.html
+          name: test-coverage
+          path: coverage/cobertura-coverage.xml
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
