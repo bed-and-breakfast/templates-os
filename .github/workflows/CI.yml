@@ -42,18 +42,23 @@ jobs:
         with:
           name: test-results
           path: test/junit.xml
+      - uses: actions/upload-artifact@v3
+        if: success() || failure() # run this step even if previous step failed
+        with:
+          name: coverage
+          path: coverage/index.html
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
   report:
     name: Test Report
     needs: test
-    if: always()
+    if: needs.test.outputs.job_status == 'success' || needs.test.outputs.job_status == 'failure'
     runs-on: ubuntu-latest
     steps:
       - uses: dorny/test-reporter@v1
         with:
-          artifact: test-results # artifact name
-          name: ${{ github.event.head_commit.message }}
+          artifact: test-results
+          name: Test Report
           path: '*.xml'
           fail-on-error: false
           reporter: jest-junit
