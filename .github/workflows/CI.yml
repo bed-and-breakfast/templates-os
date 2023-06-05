@@ -47,6 +47,7 @@ jobs:
   report:
     name: Test Report
     needs: test
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: dorny/test-reporter@v1
