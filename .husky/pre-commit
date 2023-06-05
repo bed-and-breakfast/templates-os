@@ -1,3 +1,3 @@
 npx format-package -w &&
 npx jest &&
-npx format-package -w
+npx lint-staged
