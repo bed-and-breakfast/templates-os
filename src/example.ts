@@ -1,3 +1,7 @@
 export function add(first: number, second: number) {
-  return first + second;
+    const a = 'a';
+
+    console.log('HEHO');
+
+    return first + second;
 }
