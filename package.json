@@ -30,7 +30,9 @@
         "test:watch": "jest --watch"
     },
     "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown"
+        "**/*": "prettier --write --ignore-unknown",
+        "*.{ts,js}": "eslint --cache --fix",
+        "*.+(js|ts|json)": "prettier --write"
     },
     "jest": {
         "moduleFileExtensions": [
