@@ -5,4 +5,8 @@ describe(add.name, () => {
         expect(add(1, 2)).toEqual(3);
         expect(add(2, 3)).toEqual(5);
     });
+
+    it('Fail', () => {
+        expect(add(1, 2)).toEqual(4);
+    });
 });
