@@ -52,7 +52,7 @@ jobs:
   report:
     name: Test Report
     needs: test
-    if: needs.test.outputs.job_status == 'success' || needs.test.outputs.job_status == 'failure'
+    if: needs.test.outputs.status == 'success' || needs.test.outputs.status == 'failure'
     runs-on: ubuntu-latest
     steps:
       - uses: dorny/test-reporter@v1
