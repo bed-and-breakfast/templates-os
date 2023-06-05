@@ -37,7 +37,7 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Test (With Coverage)
         run: npm run test:coverage
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: success() || failure() # run this step even if previous step failed
         with:
           name: test-results
