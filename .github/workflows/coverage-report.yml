@@ -9,11 +9,15 @@ jobs:
     name: Coverage Report
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/download-artifact@v3
+          with:
+            name: test-coverage
+            path: coverage
       - name: Create coverage report
         uses: 5monkeys/cobertura-action@master
         with:
-          artifact: test-coverage
-          name: Coverage Report
-          path: '*.xml'
+          path: 'coverage/*.xml'
+          minimum_coverage: 90
+          fail_below_threshold: true
           skip_covered: false
           only_changed_files: false
