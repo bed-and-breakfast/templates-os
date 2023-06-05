@@ -19,6 +19,7 @@ jobs:
       - name: Create coverage report
         uses: 5monkeys/cobertura-action@master
         with:
+          report_name: Coverage Report
           path: 'coverage/*.xml'
           minimum_coverage: 90
           fail_below_threshold: true
