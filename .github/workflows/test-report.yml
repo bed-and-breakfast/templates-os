@@ -5,3 +5,16 @@ on:
     types:
       - completed
 jobs:
+  report:
+    name: Test Report
+    needs: test
+    if: needs.test.outputs.status == 'success' || needs.test.outputs.status == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/test-reporter@v1
+        with:
+          artifact: test-results
+          name: Test Report
+          path: '*.xml'
+          fail-on-error: false
+          reporter: jest-junit
