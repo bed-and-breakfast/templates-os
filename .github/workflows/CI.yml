@@ -44,3 +44,15 @@ jobs:
           path: test/junit.xml
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
+  report:
+    name: Test Report
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/test-reporter@v1
+        with:
+          artifact: test-results # artifact name
+          name: ${{ github.event.head_commit.message }}
+          path: '*.xml'
+          fail-on-error: false
+          reporter: jest-junit
