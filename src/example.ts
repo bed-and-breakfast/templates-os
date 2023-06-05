@@ -4,6 +4,7 @@ export function add(first: number, second: number) {
     const c = 'c';
     const d = 'd';
     const e = 'e';
+    const f = 'f';
 
     console.log('HEHO');
 
