@@ -1,0 +1,27 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "airbnb-base",
+        "airbnb-typescript/base",
+        "prettier"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "import/prefer-default-export": 0,
+        "import/no-default-export": 2
+        //    "lines-between-class-members": [
+        //      2,
+        //      "always",
+        //      {
+        //        "exceptAfterSingleLine": true
+        //      }
+        //    ]
+    }
+}
