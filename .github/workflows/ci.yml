@@ -1,10 +1,17 @@
 name: CI
 on:
     push:
-        branches: '*'
-    pull_request:
-    workflow_call:
 jobs:
+    commit-check:
+        name: Check Conventional Commit
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Check Conventional Commit
+              uses: webiny/action-conventional-commits@v1.1.0
+              with:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     build:
         name: Build
         runs-on: ubuntu-latest
