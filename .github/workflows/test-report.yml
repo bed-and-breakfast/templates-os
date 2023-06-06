@@ -5,6 +5,7 @@ on:
             - CI
         types:
             - completed
+        branches: '*'
 jobs:
     report:
         name: Test Report
