@@ -1,4 +1,3 @@
 npx format-package -w &&
-npx prettier "**/*.+(js|ts|json)" --write
 npx jest --coverage &&
 npx lint-staged
