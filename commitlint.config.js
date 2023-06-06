@@ -1,12 +1,9 @@
-import type { UserConfig } from '@commitlint/types';
-import { RuleConfigSeverity } from '@commitlint/types';
-
-const Configuration: UserConfig = {
+const Configuration = {
     extends: ['@commitlint/config-conventional'],
     ignores: [(commit) => commit.indexOf('git subrepo ') === 0],
     rules: {
         'type-enum': [
-            RuleConfigSeverity.Error,
+            2,
             'always',
 
             // Types are explained here: https://github.com/pvdlg/conventional-commit-types
@@ -15,5 +12,4 @@ const Configuration: UserConfig = {
     },
 };
 
-// eslint-disable-next-line import/no-default-export
-export default Configuration;
+module.exports = Configuration;
