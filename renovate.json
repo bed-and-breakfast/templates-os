@@ -6,7 +6,7 @@
     "hostRules": [
         {
             "matchHost": "api.github.com",
-            "concurrentRequestLimit": 0
+            "concurrentRequestLimit": 100
         }
     ]
 }
