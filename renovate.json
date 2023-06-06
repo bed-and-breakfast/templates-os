@@ -3,9 +3,15 @@
   "extends": [
     "config:js-lib"
   ],
-  "timezone": "America/Edmonton"
+  "timezone": "America/Edmonton",
   "schedule": [
     "after 4am"
     "before 8am"
+  ],
+  "hostRules": [
+    {
+      "matchHost": "api.github.com",
+      "concurrentRequestLimit": 0
+    }
   ]
 }
