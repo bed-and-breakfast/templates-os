@@ -1,6 +1,6 @@
 {
     "name": "@bed-and-breakfast/templates-open-source",
-    "version": "0.0.14",
+    "version": "0.0.0-development",
     "description": "Bed & Breakfast Open Source Template [REPLACE ME]",
     "private": false,
     "repository": {
@@ -27,6 +27,7 @@
         "lint": "eslint . --ext .ts,.js,.yml,.yaml",
         "lint:fix": "eslint . --ext .ts,.js,.yml,.yaml --fix",
         "prepare": "husky install",
+        "semantic-release": "semantic-release",
         "test": "jest",
         "test:coverage": "jest --coverage",
         "test:watch": "jest --watch"
@@ -63,7 +64,6 @@
         ],
         "coverageDirectory": "../coverage",
         "coverageReporters": [
-            "html",
             "text",
             "cobertura"
         ],
@@ -73,8 +73,13 @@
             }
         }
     },
+    "release": {
+        "analyzeCommits": "semantic-release-conventional-commits",
+        "branches": "main"
+    },
     "types": "dist/index.d.ts",
     "devDependencies": {
+        "@semantic-release/git": "^10.0.1",
         "@types/jest": "29.5.2",
         "@types/node": "20.2.5",
         "@typescript-eslint/eslint-plugin": "5.59.9",
@@ -93,6 +98,8 @@
         "markdown-doctest": "^1.1.0",
         "prettier": "2.8.8",
         "rimraf": "5.0.1",
+        "semantic-release": "^21.0.3",
+        "semantic-release-conventional-commits": "^3.0.0",
         "ts-jest": "29.1.0",
         "typescript": "5.1.3"
     }
