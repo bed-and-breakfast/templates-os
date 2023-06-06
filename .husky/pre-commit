@@ -1,3 +1,3 @@
 npx format-package -w &&
-npx jest &&
+npx jest --coverage &&
 npx lint-staged
