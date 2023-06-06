@@ -21,15 +21,20 @@
         }
     ],
     "rules": {
-        "sort-imports": 1,
+        "@typescript-eslint/lines-between-class-members": [
+            2,
+            "always",
+            {
+                "exceptAfterSingleLine": true,
+                "exceptAfterOverload": true
+            }
+        ],
+        "import/order": [1, { "newlines-between": "never" }],
         "import/prefer-default-export": 0,
-        "import/no-default-export": 2
-        //    "lines-between-class-members": [
-        //      2,
-        //      "always",
-        //      {
-        //        "exceptAfterSingleLine": true
-        //      }
-        //    ]
+        "import/no-default-export": 2,
+        "import/no-extraneous-dependencies": [
+            2,
+            { "devDependencies": ["./*.ts", "./*.js", "**/*.test.ts", "**/*.spec.ts"] }
+        ]
     }
 }
