@@ -81,16 +81,10 @@
     },
     "release": {
         "analyzeCommits": "semantic-release-conventional-commits",
-        "majorTypes": [
-            "major",
-            "breaking"
-        ],
         "minorTypes": [
-            "minor",
             "feat"
         ],
         "patchTypes": [
-            "patch",
             "build",
             "chore",
             "ci",
@@ -107,7 +101,12 @@
             "@semantic-release/release-notes-generator",
             "@semantic-release/npm",
             "@semantic-release/github",
-            "@semantic-release/changelog"
+            [
+                "@semantic-release/changelog",
+                {
+                    "changelogFile": "CHANGELOG.md"
+                }
+            ]
         ],
         "branches": "main"
     },
