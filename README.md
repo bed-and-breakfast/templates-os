@@ -1,4 +1,4 @@
-# Bed & Breakfast Open Source Template
+# Bed & Breakfast Open Source Repository Template
 
 [![NPM Version](https://img.shields.io/npm/v/@bed-and-breakfast/templates-open-source)](https://www.npmjs.com/package/@bed-and-breakfast/templates-open-source)
 [![CI](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/ci.yml/badge.svg)](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/ci.yml)
