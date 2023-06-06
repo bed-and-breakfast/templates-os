@@ -80,12 +80,21 @@
             "breaking"
         ],
         "minorTypes": [
+            "minor",
             "feat"
         ],
         "patchTypes": [
-            "fix",
+            "patch",
+            "build",
+            "chore",
+            "ci",
             "docs",
-            "refactor"
+            "fix",
+            "perf",
+            "refactor",
+            "revert",
+            "style",
+            "test"
         ],
         "plugins": [
             "@semantic-release/commit-analyzer",
