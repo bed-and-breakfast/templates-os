@@ -2,7 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@bed-and-breakfast/templates-open-source)](https://www.npmjs.com/package/@bed-and-breakfast/templates-open-source)
 [![CI](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/ci.yml/badge.svg)](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/ci.yml)
-[![CD](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/cd.yml/badge.svg)](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/cd.yml)
+[![Release](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/release.yml/badge.svg)](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/release.yml)
 [![Code Coverage](https://codecov.io/gh/bed-and-breakfast/templates-open-source/branch/main/graph/badge.svg)](https://codecov.io/gh/bed-and-breakfast/templates-open-source)
 [![Code Climate](https://codeclimate.com/github/bed-and-breakfast/templates-open-source/badges/gpa.svg)](https://codeclimate.com/github/bed-and-breakfast/templates-open-source)
 [![Code Coverage](https://codeclimate.com/github/bed-and-breakfast/templates-open-source/badges/coverage.svg)](https://codeclimate.com/github/bed-and-breakfast/templates-open-source)

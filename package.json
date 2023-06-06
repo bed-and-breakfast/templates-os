@@ -75,10 +75,18 @@
     },
     "release": {
         "analyzeCommits": "semantic-release-conventional-commits",
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/npm",
+            "@semantic-release/github",
+            "@semantic-release/changelog"
+        ],
         "branches": "main"
     },
     "types": "dist/index.d.ts",
     "devDependencies": {
+        "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "10.0.1",
         "@types/jest": "29.5.2",
         "@types/node": "20.2.5",
