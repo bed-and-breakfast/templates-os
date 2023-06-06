@@ -5,10 +5,10 @@ on:
             - v*.*.*
 jobs:
     ci:
+        name: CI
         uses: ./.github/workflows/ci.yml
     publish:
         needs: ci
-        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         name: Publish to NPM
         runs-on: ubuntu-latest
         steps:

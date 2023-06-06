@@ -1,7 +1,8 @@
 name: Test Report
 on:
     workflow_run:
-        workflows: ['CI'] # runs after CI workflow
+        workflows:
+            - CI
         types:
             - completed
 jobs:
