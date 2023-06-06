@@ -52,3 +52,10 @@ jobs:
                   path: coverage/cobertura-coverage.xml
             - name: Upload coverage reports to Codecov
               uses: codecov/codecov-action@v3
+            - name: Upload coverage reports to Codeclimate
+              uses: paambaati/codeclimate-action@v4.0.0
+              env:
+                  CC_TEST_REPORTER_ID: 58fee0878c31e85a459cb081232fb69f843bf41b49d4ddf5bfd89373bbba0e81
+              with:
+                  coverageLocations: |
+                      coverage/cobertura-coverage.xml:cobertura
