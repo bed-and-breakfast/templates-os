@@ -16,6 +16,11 @@
     "files": [
         "dist"
     ],
+    "config": {
+        "commitizen": {
+            "path": "git-cz"
+        }
+    },
     "publishConfig": {
         "access": "public"
     },
@@ -108,9 +113,9 @@
     },
     "types": "dist/index.d.ts",
     "devDependencies": {
-        "@commitlint/cli": "^17.6.5",
-        "@commitlint/config-conventional": "^17.6.5",
-        "@semantic-release/changelog": "^6.0.3",
+        "@commitlint/cli": "17.6.5",
+        "@commitlint/config-conventional": "17.6.5",
+        "@semantic-release/changelog": "6.0.3",
         "@semantic-release/git": "10.0.1",
         "@types/jest": "29.5.2",
         "@types/node": "20.2.5",
@@ -137,10 +142,5 @@
     },
     "optionalDependencies": {
         "git-cz": "^4.9.0"
-    },
-    "config": {
-        "commitizen": {
-            "path": "git-cz"
-        }
     }
 }
