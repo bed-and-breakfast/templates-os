@@ -129,7 +129,9 @@ inquirer
             ...answers.package,
             keywords: [
                 ...(answers.packageKeywordsBedBreakfast ? ['bed', 'breakfast'] : []),
-                ...answers.package.keywords.split(',').map((keyword) => keyword.trim()),
+                ...(answers.package.keywords.length > 0
+                    ? answers.package.keywords.split(',').map((keyword) => keyword.trim())
+                    : []),
             ],
             version: '0.0.0',
             homepage: `https://github.com/${answers.githubPath}`,
@@ -157,6 +159,6 @@ ${answers.codeClimate ? `[![Code Climate](https://codeclimate.com/github/${answe
             spawnSync('git', ['add', 'package.json']);
             spawnSync('git', ['add', 'README.md']);
             spawnSync('git', ['add', 'CHANGELOG.md']);
-            spawnSync('git', ['commit', '-m', 'init: initial commit']);
+            spawnSync('git', ['commit', '-m', '"init: initial commit"']);
         }
     });
