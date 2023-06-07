@@ -25,7 +25,7 @@ inquirer
         {
             type: 'input',
             name: 'package.name',
-            message: 'What is the package name (i.e. \'@bed-and-breakfast/package\')',
+            message: "What is the package name (i.e. '@bed-and-breakfast/package')",
             validate: (input) => {
                 const valid = validate(input).validForNewPackages;
 
@@ -39,7 +39,7 @@ inquirer
         {
             type: 'input',
             name: 'package.description',
-            message: 'What is the package description (i.e. \'Bed & Breakfast Package\')',
+            message: "What is the package description (i.e. 'Bed & Breakfast Package')",
             validate: (input) => {
                 const valid = input.length >= 5;
 
@@ -53,7 +53,7 @@ inquirer
         {
             type: 'input',
             name: 'package.author',
-            message: 'What is the package author (i.e. \'Bed & Breakfast\')',
+            message: "What is the package author (i.e. 'Bed & Breakfast')",
             default: 'Bed & Breakfast',
             validate: (input) => {
                 const valid = input.length >= 1;
@@ -68,13 +68,13 @@ inquirer
         {
             type: 'confirm',
             name: 'packageKeywordsBedBreakfast',
-            message: 'Would you like to add [\'bed\', \'breakfast\'] to package keywords',
+            message: "Would you like to add ['bed', 'breakfast'] to package keywords",
             default: true,
         },
         {
             type: 'input',
             name: 'package.keywords',
-            message: 'Would you like to add other keywords (i.e. \'npm,package,...\')',
+            message: "Would you like to add other keywords (i.e. 'npm,package,...')",
             validate: (input) => {
                 let valid = false;
 
@@ -97,7 +97,12 @@ inquirer
             name: 'githubPath',
             message: 'What is the github url path (https://github.com/<PATH>, i.e. bed-and-breakfast/package)',
             default: (answers: Answers) =>
-                answers.package.name.indexOf('@') === 0 ? answers.package.name.substring(1) : answers.package.name,
+                // eslint-disable-next-line no-nested-ternary
+                answers.package.name.indexOf('/') === '-1'
+                    ? undefined
+                    : answers.package.name.indexOf('@') === 0
+                    ? answers.package.name.substring(1)
+                    : answers.package.name,
             validate: (input) => {
                 const valid = input.length >= 1 && input.indexOf('/') > 0;
 
