@@ -23,3 +23,4 @@ TODO: Add docs
 TODO: Add docs
 
 -   Conventional commits
+-   Comittizen
