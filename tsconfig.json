@@ -5,7 +5,8 @@
         "outDir": "dist",
         "sourceMap": true,
         "declaration": true,
-        "module": "CommonJS",
+        "module": "es2015",
+        "target": "es2015",
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -15,7 +16,6 @@
         "noPropertyAccessFromIndexSignature": true,
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
-        "esModuleInterop": true,
-        "target": "es2015"
+        "esModuleInterop": true
     }
 }
