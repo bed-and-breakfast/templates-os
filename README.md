@@ -12,3 +12,4 @@ Base template for typescript open source packages
 
 TODO: Check image links in md
 TODO: Add docs
+TODO: Add docs
