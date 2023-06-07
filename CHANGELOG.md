@@ -1,3 +1,10 @@
+## [4.1.1](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.1.0...v4.1.1) (2023-06-07)
+
+
+### Bug Fixes
+
+* remove bs todos ([e322d9f](https://github.com/bed-and-breakfast/templates-open-source/commit/e322d9fbc127881220a35a207da89656cb5cb120))
+
 # [4.1.0](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.0.3...v4.1.0) (2023-06-07)
 
 
