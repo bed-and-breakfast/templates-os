@@ -25,7 +25,7 @@ inquirer
         {
             type: 'input',
             name: 'package.name',
-            message: 'What is the package name (i.e. @bed-and-breakfast/package)',
+            message: 'What is the package name (i.e. \'@bed-and-breakfast/package\')',
             validate: (input) => {
                 const valid = validate(input).validForNewPackages;
 
@@ -39,7 +39,7 @@ inquirer
         {
             type: 'input',
             name: 'package.description',
-            message: 'What is the package description (i.e. Bed & Breakfast Package)',
+            message: 'What is the package description (i.e. \'Bed & Breakfast Package\')',
             validate: (input) => {
                 const valid = input.length >= 5;
 
@@ -53,7 +53,7 @@ inquirer
         {
             type: 'input',
             name: 'package.author',
-            message: 'What is the package author (i.e. Bed & Breakfast)',
+            message: 'What is the package author (i.e. \'Bed & Breakfast\')',
             default: 'Bed & Breakfast',
             validate: (input) => {
                 const valid = input.length >= 1;
@@ -68,13 +68,13 @@ inquirer
         {
             type: 'confirm',
             name: 'packageKeywordsBedBreakfast',
-            message: 'Would you like to add bed, breakfast to package keywords',
+            message: 'Would you like to add [\'bed\', \'breakfast\'] to package keywords',
             default: true,
         },
         {
             type: 'input',
             name: 'package.keywords',
-            message: 'Would you like to add other keywords (i.e. npm,package,...)',
+            message: 'Would you like to add other keywords (i.e. \'npm,package,...\')',
             validate: (input) => {
                 let valid = false;
 
