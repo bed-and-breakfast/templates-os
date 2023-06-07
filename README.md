@@ -30,3 +30,4 @@ TODO: Add docs
 -   Conventional commits
 -   Comittizen
 -   Renovate
+-   Badges
