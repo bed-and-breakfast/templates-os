@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
 import { readFileSync, rmSync, writeFileSync } from 'fs';
-// eslint-disable-next-line import/no-extraneous-dependencies
+import { spawnSync } from 'child_process';
 import chalk from 'chalk';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import inquirer from 'inquirer';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import validate from 'validate-npm-package-name';
 
 type Answers = {
     package: { name: string; description: string; author: string; keywords: string };
     githubPath: string;
+    packageKeywordsBedBreakfast: boolean;
     codeClimate: boolean;
+    initialCommit: boolean;
 };
 
 const invalid = (message: string) => {
@@ -66,17 +66,24 @@ inquirer
             },
         },
         {
+            type: 'confirm',
+            name: 'packageKeywordsBedBreakfast',
+            message: 'Would you like to add bed, breakfast to package keywords',
+            default: true,
+        },
+        {
             type: 'input',
             name: 'package.keywords',
-            message: 'Package keywords (i.e. npm,package,...)',
+            message: 'Would you like to add other keywords (i.e. npm,package,...)',
             validate: (input) => {
                 let valid = false;
 
                 const keywords = input.split(',');
 
                 valid =
-                    input.length >= 3 &&
-                    keywords.length === keywords.filter((keyword: string) => keyword.length > 0).length;
+                    input.length === 0 ||
+                    (input.length >= 3 &&
+                        keywords.length === keywords.filter((keyword: string) => keyword.length > 0).length);
 
                 if (!valid) {
                     invalid('Invalid package keywords');
@@ -107,6 +114,12 @@ inquirer
             message: 'Would you like to use Code Climate',
             default: true,
         },
+        {
+            type: 'confirm',
+            name: 'initialCommit',
+            message: 'Would you like to automatically do an initial commit',
+            default: true,
+        },
     ])
     .then((answers) => {
         let packageJson = JSON.parse(readFileSync('package.json').toString());
@@ -114,7 +127,10 @@ inquirer
         packageJson = {
             ...packageJson,
             ...answers.package,
-            keywords: answers.package.keywords.split(',').map((keyword) => keyword.trim()),
+            keywords: [
+                ...answers.packageKeywordsBedBreakfast,
+                ...answers.package.keywords.split(',').map((keyword) => keyword.trim()),
+            ],
             version: '0.0.0',
             homepage: `https://github.com/${answers.githubPath}`,
             bugs: `https://github.com/${answers.githubPath}/issues`,
@@ -134,4 +150,13 @@ ${answers.codeClimate ? `[![Code Climate](https://codeclimate.com/github/${answe
 [![Known Vulnerabilities](https://snyk.io/test/github/${answers.githubPath}/badge.svg?targetFile=package.json)](https://snyk.io/test/github/${answers.githubPath}?targetFile=package.json)`)
 
         rmSync('CHANGELOG.md');
+
+        spawnSync('npx', ['format-package', '-w']);
+
+        if (answers.initialCommit) {
+            spawnSync('git', ['add', 'package.json']);
+            spawnSync('git', ['add', 'README.md']);
+            spawnSync('git', ['add', 'CHANGELOG.md']);
+            spawnSync('git', ['commit', '-m', 'init: initial commit']);
+        }
     });

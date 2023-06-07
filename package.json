@@ -30,7 +30,7 @@
         "format": "prettier \"**/*.+(js|ts|json)\" --check",
         "format:fix": "prettier \"**/*.+(js|ts|json)\" --write",
         "format:package": "format-package -w",
-        "init": "node dist/init/index.js && format-package -w",
+        "init": "node dist/init/index.js",
         "lint": "eslint . --ext .ts,.js,.yml,.yaml",
         "lint:fix": "eslint . --ext .ts,.js,.yml,.yaml --fix",
         "prepare": "husky install",
