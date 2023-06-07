@@ -11,6 +11,7 @@ jobs:
             - name: Check Conventional Commit
               uses: webiny/action-conventional-commits@v1.1.0
     markdown-link-check:
+        name: Check Markdown Links
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -21,23 +22,38 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
+            - name: Checkout
+              uses: actions/checkout@v3
               with:
-                  node-version: '18.x'
-            - run: npm ci --ignore-scripts
-            - run: npm run build
+                  fetch-depth: 0
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 'lts/*'
+            - name: Install dependencies
+              run: npm ci --ignore-scripts
+
+            - name: Build
+              run: npm run build
     lint:
         name: Lint
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
+            - name: Checkout
+              uses: actions/checkout@v3
               with:
-                  node-version: '18.x'
-            - run: npm ci --ignore-scripts
-            - run: npm run lint
-            - run: npm run format
+                  fetch-depth: 0
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 'lts/*'
+            - name: Install dependencies
+              run: npm ci --ignore-scripts
+
+            - name: Lint
+              run: npm run lint
+            - name: Format
+              run: npm run format
     test:
         name: Test
         runs-on: ubuntu-latest
@@ -57,6 +73,7 @@ jobs:
 
             - name: Test (With Coverage)
               run: npm run test:coverage
+
             - name: Upload test artifacts
               uses: actions/upload-artifact@v3
               if: success() || failure() # run this step even if previous step failed
@@ -69,6 +86,7 @@ jobs:
               with:
                   name: test-coverage
                   path: coverage/cobertura-coverage.xml
+
             - name: Upload coverage reports to Codecov
               uses: codecov/codecov-action@v3
             - name: Upload coverage reports to Codeclimate
