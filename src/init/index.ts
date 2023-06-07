@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { readFileSync } from 'fs';
+import { readFileSync, rmSync, writeFileSync } from 'fs';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import chalk from 'chalk';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -101,12 +101,18 @@ inquirer
                 return valid;
             },
         },
+        {
+            type: 'confirm',
+            name: 'codeClimate',
+            message: 'Would you like to use Code Climate',
+            default: true,
+        },
     ])
     .then((answers) => {
         let packageJson = JSON.parse(readFileSync('package.json').toString());
 
         packageJson = {
-            // ...packageJson,
+            ...packageJson,
             ...answers.package,
             keywords: answers.package.keywords.split(',').map((keyword) => keyword.trim()),
             version: '0.0.0',
@@ -115,12 +121,10 @@ inquirer
             repository: { url: `https://github.com/${answers.githubPath}.git` },
         };
 
-        // eslint-disable-next-line no-console
-        console.log(packageJson);
+        writeFileSync('package.json', JSON.stringify(packageJson));
 
         // prettier-ignore
-        // eslint-disable-next-line no-console
-        console.log(`# ${answers.package.description}\n +
+        writeFileSync('README.md', `# ${answers.package.description}\n +
             \n
             [![NPM Version](https://img.shields.io/npm/v/${answers.package.name})](https://www.npmjs.com/package/${answers.package.name})\n
             [![CI](https://github.com/${answers.githubPath}/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/${answers.githubPath}/actions/workflows/ci.yml)\n
@@ -128,4 +132,6 @@ inquirer
             ${answers.codeClimate ? `[![Code Climate](https://codeclimate.com/github/${answers.githubPath}/badges/gpa.svg)](https://codeclimate.com/github/${answers.githubPath})\n
             [![Code Coverage](https://codeclimate.com/github/${answers.githubPath}/badges/coverage.svg)](https://codeclimate.com/github/${answers.githubPath})\n` : ''}
             [![Known Vulnerabilities](https://snyk.io/test/github/${answers.githubPath}/badge.svg?targetFile=package.json)](https://snyk.io/test/github/${answers.githubPath}?targetFile=package.json)`)
+
+        rmSync('CHANGELOG.md');
     });
