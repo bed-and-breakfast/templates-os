@@ -1,10 +1,10 @@
+npx check-all-markdown --no-check-links
+npx markdown-doctest
+git add README.md
+
 npx format-package -w
 git add package.json
 
 npx jest --coverage
 
 npx lint-staged
-
-npx check-all-markdown
-npx markdown-doctest
-git add README.md
