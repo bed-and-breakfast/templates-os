@@ -23,6 +23,10 @@ TODO: Add docs
 TODO: Add docs
 
 -   Usage
+    -   Clone
+    -   Overwrite values
+    -   Set github settings
+    -   Overwrite README.md
 -   Releases
 -   Tests
     -   Coverage
@@ -31,3 +35,4 @@ TODO: Add docs
 -   Comittizen
 -   Renovate
 -   Badges
+-   Auto changelog
