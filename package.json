@@ -1,13 +1,14 @@
 {
-    "name": "testy",
-    "version": "0.0.0",
-    "description": "teeesty",
+    "name": "@bed-and-breakfast/templates-open-source",
+    "version": "4.1.2",
+    "description": "Bed & Breakfast Open Source Template",
     "private": false,
     "repository": {
-        "url": "https://github.com/testyt/t.git"
+        "type": "git",
+        "url": "https://github.com/bed-and-breakfast/templates-open-source.git"
     },
-    "bugs": "https://github.com/testyt/t/issues",
-    "homepage": "https://github.com/testyt/t",
+    "bugs": "https://github.com/bed-and-breakfast/templates-open-source/issues",
+    "homepage": "https://github.com/bed-and-breakfast/templates-open-source",
     "author": "Bed & Breakfast",
     "keywords": [],
     "type": "module",
