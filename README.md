@@ -22,5 +22,11 @@ TODO: Add docs
 TODO: Add docs
 TODO: Add docs
 
+-   Usage
+-   Releases
+-   Tests
+    -   Coverage
+    -   Reports
 -   Conventional commits
 -   Comittizen
+-   Renovate
