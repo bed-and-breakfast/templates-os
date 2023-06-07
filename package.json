@@ -1,6 +1,6 @@
 {
     "name": "@bed-and-breakfast/templates-open-source",
-    "version": "4.0.2",
+    "version": "4.0.3",
     "description": "Bed & Breakfast Open Source Template [REPLACE ME]",
     "private": false,
     "repository": {
@@ -111,7 +111,7 @@
         "@commitlint/cli": "17.6.5",
         "@commitlint/config-conventional": "17.6.5",
         "@semantic-release/changelog": "6.0.3",
-        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/git": "10.0.1",
         "@types/jest": "29.5.2",
         "@types/node": "20.2.5",
         "@typescript-eslint/eslint-plugin": "5.59.9",
