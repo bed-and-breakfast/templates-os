@@ -128,7 +128,7 @@ inquirer
             ...packageJson,
             ...answers.package,
             keywords: [
-                ...answers.packageKeywordsBedBreakfast,
+                ...(answers.packageKeywordsBedBreakfast ? ['bed', 'breakfast'] : []),
                 ...answers.package.keywords.split(',').map((keyword) => keyword.trim()),
             ],
             version: '0.0.0',
