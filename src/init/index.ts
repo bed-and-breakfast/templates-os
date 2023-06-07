@@ -163,7 +163,7 @@ ${answers.codeClimate ? `[![Code Climate](https://codeclimate.com/github/${answe
 
             if (spawn.stderr) {
                 // eslint-disable-next-line no-console
-                console.log(Error(spawn.stderr.toString()));
+                console.error(Error(spawn.stderr.toString()));
                 process.exitCode = 1;
             } else {
                 // eslint-disable-next-line no-console
