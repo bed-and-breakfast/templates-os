@@ -98,7 +98,7 @@ inquirer
             message: 'What is the github url path (https://github.com/<PATH>, i.e. bed-and-breakfast/package)',
             default: (answers: Answers) =>
                 // eslint-disable-next-line no-nested-ternary
-                answers.package.name.indexOf('/') === '-1'
+                answers.package.name.indexOf('/') === -1
                     ? undefined
                     : answers.package.name.indexOf('@') === 0
                     ? answers.package.name.substring(1)
