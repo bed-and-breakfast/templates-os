@@ -159,7 +159,7 @@ ${answers.codeClimate ? `[![Code Climate](https://codeclimate.com/github/${answe
             spawnSync('git', ['add', 'package.json']);
             spawnSync('git', ['add', 'README.md']);
             spawnSync('git', ['add', 'CHANGELOG.md']);
-            const spawn = spawnSync('git', ['commit', '-am', "'init: initial commit'"]);
+            const spawn = spawnSync('git', ['commit', '-am', '"init: initial commit"'], { shell: true });
 
             if (spawn.stderr) {
                 // eslint-disable-next-line no-console
