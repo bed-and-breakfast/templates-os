@@ -14,6 +14,8 @@ TODO: Check image links in md
 
 TODO: Cache build and node modules
 
+TODO: Don't run Release on PR (Issue)
+
 TODO: Add docs
 
 -   Usage
