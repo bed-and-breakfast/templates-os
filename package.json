@@ -1,17 +1,15 @@
 {
     "name": "testy",
     "version": "0.0.0",
-    "description": "teeeesty",
+    "description": "teeesty",
     "private": false,
     "repository": {
-        "url": "https://github.com/t/t.git"
+        "url": "https://github.com/testyt/t.git"
     },
-    "bugs": "https://github.com/t/t/issues",
-    "homepage": "https://github.com/t/t",
+    "bugs": "https://github.com/testyt/t/issues",
+    "homepage": "https://github.com/testyt/t",
     "author": "Bed & Breakfast",
-    "keywords": [
-        ""
-    ],
+    "keywords": [],
     "type": "module",
     "main": "dist/index.js",
     "files": [

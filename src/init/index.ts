@@ -159,6 +159,12 @@ ${answers.codeClimate ? `[![Code Climate](https://codeclimate.com/github/${answe
             spawnSync('git', ['add', 'package.json']);
             spawnSync('git', ['add', 'README.md']);
             spawnSync('git', ['add', 'CHANGELOG.md']);
-            spawnSync('git', ['commit', '-m', '"init: initial commit"']);
+            const spawn = spawnSync('git', ['commit', '-m', '"init: initial commit"']);
+
+            if (spawn.stderr) {
+                // eslint-disable-next-line no-console
+                console.log(Error(spawn.stderr.toString()));
+                process.exitCode = 1;
+            }
         }
     });
