@@ -35,3 +35,11 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: npx semantic-release
+    no-release:
+      if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'failure') }}
+      name: No Release
+      runs-on: ubuntu-latest
+      steps:
+        - name: CI Failure
+          run: echo "CI Failure" && exit 1
+
