@@ -88,8 +88,6 @@ jobs:
                   name: test-coverage
                   path: coverage/cobertura-coverage.xml
 
-            - name: Upload coverage reports to Codecov
-              uses: codecov/codecov-action@v3
             - name: Upload coverage reports to Codeclimate
               uses: paambaati/codeclimate-action@v4.0.0
               env:
