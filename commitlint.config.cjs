@@ -1,6 +1,5 @@
 const Configuration = {
     extends: ['@commitlint/config-conventional'],
-    ignores: [(commit) => commit.indexOf('git subrepo ') === 0],
     rules: {
         'type-enum': [
             2,
