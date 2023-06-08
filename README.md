@@ -29,6 +29,8 @@ TODO: Cache build and node modules
 
 TODO: Make init script
 
+TODO: Issue etc templates
+
 TODO: Add docs
 
 -   Usage
