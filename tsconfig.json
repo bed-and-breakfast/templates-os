@@ -2,20 +2,20 @@
     "compilerOptions": {
         "strict": true,
         "rootDir": "src",
-        "outDir": "dist",
+        "outDir": "lib/esm",
         "sourceMap": true,
         "declaration": true,
-        "module": "es2015",
-        "target": "es2015",
-        "moduleResolution": "node",
+        "target": "ES2015",
+        "module": "ES2015",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
         "noImplicitOverride": true,
         "noPropertyAccessFromIndexSignature": true,
         "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "esModuleInterop": true
+        "noFallthroughCasesInSwitch": true
     }
 }

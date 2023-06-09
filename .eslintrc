@@ -29,9 +29,17 @@
                 "exceptAfterOverload": true
             }
         ],
+        "@typescript-eslint/padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "export",
+                "next": "export"
+            }
+        ],
         "import/order": [1, { "newlines-between": "never" }],
         "import/prefer-default-export": 0,
         "import/no-default-export": 2,
-        "import/no-extraneous-dependencies": [2, { "devDependencies": ["./*.cjs", "**/*.test.ts", "**/*.spec.ts"] }]
+        "import/no-extraneous-dependencies": [2, { "devDependencies": ["./*.cjs", "./**/*.test.ts", "./**/*.spec.ts"] }]
     }
 }
