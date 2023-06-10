@@ -27,11 +27,11 @@ TODO: Check image links in md
 
 TODO: Cache build and node modules
 
-TODO: Make init script
-
 TODO: Issue etc templates
 
 TODO: Add docs
+
+TOD: Compare Changelog with nx version
 
 -   Usage
     -   Clone
