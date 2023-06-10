@@ -1,0 +1,26 @@
+plugins:
+    duplication:
+        enabled: true
+    markdownlint:
+        enabled: true
+    shellcheck:
+        enabled: true
+    semgrep:
+        enabled: true
+    git.legal:
+        enabled: true
+exclude_patterns:
+    - config/
+    - db/
+    - lib/
+    - dist/
+    - features/
+    - ./**/node_modules/
+    - script/
+    - ./**/spec/
+    - ./**/test/
+    - ./**/tests/
+    - Tests/
+    - ./**/vendor/
+    - ./**/*_test.go
+    - ./**/*.d.ts
