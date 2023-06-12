@@ -13,6 +13,10 @@ Base template for typescript open source packages
 
 ## Init
 
+```sh
+npx template-init
+```
+
 ## Pulling updates
 
 ```
@@ -27,7 +31,7 @@ TODO: Check image links in md
 
 TODO: Cache build and node modules
 
-TODO: Issue etc templates
+TODO: Issue etc templates (Maybe take https://github.com/Josee9988/project-template as a base?)
 
 TODO: Add docs
 
@@ -47,3 +51,13 @@ TOD: Compare Changelog with nx version
 -   Renovate
 -   Badges
 -   Auto changelog
+
+# Features
+
+-   Complete github CI/CD process
+-   Automatic package update by PRs
+-   Automatic linting and formatting
+-   Ability to use guided commits (commitizen)
+-   Test coverage reports
+-   Code quality analysis
+-   Automatic release and changelog generation based on conventional commits

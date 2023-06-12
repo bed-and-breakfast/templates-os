@@ -21,15 +21,14 @@ jobs:
               uses: actions/checkout@v3
               with:
                   fetch-depth: 0
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
+            - name: Get build artifadcts
+              uses: dawidd6/action-download-artifact@v2
               with:
-                  node-version: 'lts/*'
-            - name: Install dependencies
-              run: npm ci --ignore-scripts
+                  workflow: ci.yml
+                  name: build
+                  path: lib
+                  run_id: ${{ github.event.workflow_run.id }}
 
-            - name: Build
-              run: npm run build
             - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
               run: npm audit signatures
             - name: Release

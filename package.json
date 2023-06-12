@@ -3,6 +3,9 @@
     "version": "4.2.1",
     "description": "Bed & Breakfast Open Source Template",
     "private": false,
+    "engines": {
+        "node": ">=14.0.0"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/bed-and-breakfast/templates-open-source.git"
@@ -117,6 +120,7 @@
     },
     "types": "lib/index.d.ts",
     "devDependencies": {
+        "@bed-and-breakfast/template-init": "^1.1.15",
         "@commitlint/cli": "17.6.5",
         "@commitlint/config-conventional": "17.6.5",
         "@semantic-release/changelog": "6.0.3",
