@@ -51,8 +51,9 @@
         "test:watch": "jest --watch"
     },
     "lint-staged": {
-        "*.{ts,js}": "eslint --cache --fix",
-        "*.+(js|ts|json|yml|yaml)": "prettier --write"
+        "*.!(js|ts|json|yml|yaml)": "prettier --write --ignore-unknown",
+        "*.@(js|ts|json|yml|yaml)": "prettier --write",
+        "*.{ts,js,yml,yaml}": "eslint --cache --fix"
     },
     "jest": {
         "collectCoverageFrom": [
