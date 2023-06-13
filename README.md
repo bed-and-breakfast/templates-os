@@ -6,7 +6,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/bed-and-breakfast/templates-open-source/badge.svg?targetFile=package.json)](https://snyk.io/test/github/bed-and-breakfast/templates-open-source?targetFile=package.json)
 
 Bed & Breakfast Open Source Repository Template
-===============================================
+==============================================
 
 An out-of-the-box repository with all the necessities to make maintaining a typescript library easy.
 

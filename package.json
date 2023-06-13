@@ -51,7 +51,6 @@
         "test:watch": "jest --watch"
     },
     "lint-staged": {
-        "**/*": "prettier --write --ignore-unknown",
         "*.{ts,js}": "eslint --cache --fix",
         "*.+(js|ts|json|yml|yaml)": "prettier --write"
     },
