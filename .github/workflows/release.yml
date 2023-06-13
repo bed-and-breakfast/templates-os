@@ -21,6 +21,13 @@ jobs:
               uses: actions/checkout@v3
               with:
                   fetch-depth: 0
+            - name: Setup Node
+              uses: './.github/actions/ci-node-setup'
+              with:
+                  node-version-file: .nvmrc
+
+            - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+              run: npm audit signatures
             - name: Get build artifacts
               uses: dawidd6/action-download-artifact@v2
               with:
@@ -28,9 +35,6 @@ jobs:
                   name: build
                   path: lib
                   run_id: ${{ github.event.workflow_run.id }}
-
-            - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-              run: npm audit signatures
             - name: Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
