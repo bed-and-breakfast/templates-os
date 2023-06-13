@@ -74,13 +74,13 @@ jobs:
               uses: actions/upload-artifact@v3
               if: success() || failure()
               with:
-                  name: test-results-${{ matrix.step }}
+                  name: test-results-${{ matrix.node }}
                   path: test/junit.xml
             - name: Upload coverage artifacts
               uses: actions/upload-artifact@v3
               if: success() || failure()
               with:
-                  name: test-coverage-${{ matrix.step }}
+                  name: test-coverage-${{ matrix.node }}
                   path: coverage/cobertura-coverage.xml
             - name: Upload coverage reports to Codeclimate
               uses: paambaati/codeclimate-action@v4.0.0
@@ -99,11 +99,5 @@ jobs:
               uses: actions/download-artifact@v3
               with:
                   path: test
-            - name: Download coverage artifacts
-              uses: actions/download-artifact@v3
-              with:
-                  path: coverage
             - name: List test artifacts
-              run: ls -la test
-            - name: List coverage artifacts
               run: ls -la test
