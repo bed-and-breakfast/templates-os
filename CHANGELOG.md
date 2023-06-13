@@ -1,3 +1,5 @@
+## [4.2.6](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.5...v4.2.6) (2023-06-13)
+
 ## [4.2.5](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.4...v4.2.5) (2023-06-13)
 
 
