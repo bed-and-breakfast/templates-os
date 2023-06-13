@@ -1,3 +1,10 @@
+## [4.2.10](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.9...v4.2.10) (2023-06-13)
+
+
+### Docs
+
+* update readme toc ([2b5aad0](https://github.com/bed-and-breakfast/templates-open-source/commit/2b5aad0be0959c55e35c381d156516eb5765ecb5))
+
 ## [4.2.9](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.8...v4.2.9) (2023-06-13)
 
 
