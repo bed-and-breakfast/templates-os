@@ -41,7 +41,7 @@
         "commit": "git-cz",
         "format": "prettier \"**/*.+(js|ts|json|yml|yaml)\" --check",
         "format:fix": "prettier \"**/*.+(js|ts|json|yml|yaml)\" --write",
-        "format:package": "format-package -w",
+        "format:package": "sort-package-json",
         "lint": "eslint . --ext .ts,.js,.yml,.yaml",
         "lint:fix": "eslint . --ext .ts,.js,.yml,.yaml --fix",
         "prepare": "husky install",
@@ -56,27 +56,6 @@
         "*.+(js|ts|json|yml|yaml)": "prettier --write"
     },
     "jest": {
-        "moduleFileExtensions": [
-            "js",
-            "json",
-            "ts"
-        ],
-        "rootDir": "src",
-        "testRegex": ".*\\.spec\\.ts$",
-        "testEnvironment": "node",
-        "transform": {
-            "^.+\\.(t|j)s$": "ts-jest"
-        },
-        "reporters": [
-            "default",
-            [
-                "jest-junit",
-                {
-                    "suiteName": "Test Report",
-                    "outputDirectory": "./test"
-                }
-            ]
-        ],
         "collectCoverageFrom": [
             "**/*.(t|j)s"
         ],
@@ -89,10 +68,32 @@
             "global": {
                 "lines": 100
             }
+        },
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "ts"
+        ],
+        "reporters": [
+            "default",
+            [
+                "jest-junit",
+                {
+                    "suiteName": "Test Report",
+                    "outputDirectory": "./test"
+                }
+            ]
+        ],
+        "rootDir": "src",
+        "testEnvironment": "node",
+        "testRegex": ".*\\.spec\\.ts$",
+        "transform": {
+            "^.+\\.(t|j)s$": "ts-jest"
         }
     },
     "release": {
         "analyzeCommits": "semantic-release-conventional-commits",
+        "branches": "main",
         "minorTypes": [
             "feat"
         ],
@@ -110,13 +111,77 @@
         ],
         "plugins": [
             "@semantic-release/commit-analyzer",
-            "@semantic-release/release-notes-generator",
+            [
+                "@semantic-release/release-notes-generator",
+                {
+                    "preset": "conventionalcommits",
+                    "presetConfig": {
+                        "types": [
+                            {
+                                "type": "build",
+                                "section": "Build",
+                                "hidden": true
+                            },
+                            {
+                                "type": "chore",
+                                "section": "Chores",
+                                "hidden": false
+                            },
+                            {
+                                "type": "ci",
+                                "section": "CI/CD",
+                                "hidden": true
+                            },
+                            {
+                                "type": "docs",
+                                "section": "Docs",
+                                "hidden": false
+                            },
+                            {
+                                "type": "feat",
+                                "section": "Features",
+                                "hidden": false
+                            },
+                            {
+                                "type": "fix",
+                                "section": "Bug Fixes",
+                                "hidden": false
+                            },
+                            {
+                                "type": "perf",
+                                "section": "Performance",
+                                "hidden": false
+                            },
+                            {
+                                "type": "refactor",
+                                "section": "Refactor",
+                                "hidden": true
+                            },
+                            {
+                                "type": "revert",
+                                "section": "Revert",
+                                "hidden": false
+                            },
+                            {
+                                "type": "style",
+                                "section": "Styles",
+                                "hidden": true
+                            },
+                            {
+                                "type": "test",
+                                "section": "Tests",
+                                "hidden": true
+                            }
+                        ]
+                    }
+                }
+            ],
             "@semantic-release/changelog",
             "@semantic-release/npm",
             "@semantic-release/github",
             "@semantic-release/git"
         ],
-        "branches": "main"
+        "preset": "conventionalcommits"
     },
     "types": "lib/index.d.ts",
     "devDependencies": {
@@ -135,7 +200,6 @@
         "eslint-config-prettier": "8.8.0",
         "eslint-plugin-yaml": "0.5.0",
         "eslint-plugin-yml": "1.8.0",
-        "format-package": "7.0.0",
         "husky": "8.0.3",
         "jest": "29.5.0",
         "jest-junit": "16.0.0",
@@ -145,10 +209,8 @@
         "rimraf": "5.0.1",
         "semantic-release": "21.0.5",
         "semantic-release-conventional-commits": "3.0.0",
+        "sort-package-json": "^2.4.1",
         "ts-jest": "29.1.0",
         "typescript": "5.0.4"
-    },
-    "optionalDependencies": {
-        "git-cz": "^4.9.0"
     }
 }
