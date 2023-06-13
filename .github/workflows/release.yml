@@ -10,7 +10,7 @@ jobs:
     release:
         if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'success') }}
         name: Release
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         permissions:
             contents: write # to be able to publish a GitHub release
             issues: write # to be able to comment on released issues
@@ -39,7 +39,7 @@ jobs:
     no-release:
         if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'failure') }}
         name: No Release
-        runs-on: ubuntu-20.04
+        runs-on: ubuntu-22.04
         steps:
             - name: CI Failure
               run: echo "CI Failure" && exit 1
