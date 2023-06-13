@@ -8,7 +8,7 @@ on:
         branches: 'main'
 jobs:
     release:
-        if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'success') }}
+        if: ${{ (github.event_name == 'push') && (github.ref_name == 'main') && (github.event.workflow_run.conclusion == 'success') }}
         name: Release
         runs-on: ubuntu-latest
         permissions:
@@ -41,7 +41,7 @@ jobs:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: npx semantic-release
     no-release:
-        if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'failure') }}
+        if: ${{ (github.event_name == 'push') && (github.ref_name == 'main') && (github.event.workflow_run.conclusion == 'failure') }}
         name: No Release
         runs-on: ubuntu-latest
         steps:
