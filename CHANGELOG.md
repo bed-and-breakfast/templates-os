@@ -1,3 +1,10 @@
+## [4.2.5](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.4...v4.2.5) (2023-06-13)
+
+
+### Bug Fixes
+
+* links ([1f42840](https://github.com/bed-and-breakfast/templates-open-source/commit/1f42840ae44e958dc9c73f8c609be65b23c72890))
+
 ## [4.2.4](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.3...v4.2.4) (2023-06-13)
 
 ## [4.2.3](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.2...v4.2.3) (2023-06-13)
