@@ -8,7 +8,7 @@ on:
         branches: 'main'
 jobs:
     release:
-        if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'success') }}
+        if: ${{ (github.event_name == 'workflow_run') && (github.event.workflow_run.conclusion == 'success') }}
         name: Release
         runs-on: ubuntu-latest
         permissions:
@@ -17,8 +17,6 @@ jobs:
             pull-requests: write # to be able to comment on released pull requests
             id-token: write # to enable use of OIDC for npm provenance
         steps:
-            - name: ECHO
-              run: echo ${{ github.event_name }} && echo ${{ github.ref_name }}
             - name: Checkout
               uses: actions/checkout@v3
               with:
@@ -43,9 +41,11 @@ jobs:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: npx semantic-release
     no-release:
-        if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'failure') }}
+        #        if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'failure') }}
         name: No Release
         runs-on: ubuntu-latest
         steps:
+            - name: ECHO
+              run: echo ${{ github.event_name }} && echo ${{ github.ref_name }}
             - name: CI Failure
               run: echo "CI Failure" && exit 1
