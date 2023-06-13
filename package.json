@@ -52,7 +52,7 @@
     },
     "lint-staged": {
         "*.!(js|ts|json|yml|yaml)": "prettier --write --ignore-unknown",
-        "*.@(js|ts|json|yml|yaml)": "prettier --write",
+        "*.@(js|ts|json)": "prettier --write",
         "*.{ts,js,yml,yaml}": "eslint --cache --fix"
     },
     "jest": {
