@@ -96,7 +96,8 @@ jobs:
               with:
                   coverageLocations: |
                       coverage/cobertura-coverage.xml:cobertura
-    process-test-output:
+    merge-test-reports:
+        name: Merge Test Reports
         runs-on: ubuntu-22.04
         needs: test
         if: success() || failure()
