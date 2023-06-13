@@ -57,7 +57,10 @@ jobs:
         runs-on: ubuntu-22.04
         strategy:
             matrix:
-                node: [14, 16, 18, lts, latest]
+                node: [14, 16, 18, lts/*, latest]
+                include:
+                    - node: lts/*
+                      nodeName: 14
         env:
             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         steps:
@@ -74,13 +77,13 @@ jobs:
               uses: actions/upload-artifact@v3
               if: success() || failure()
               with:
-                  name: test-results-${{ matrix.node }}
+                  name: test-results-${{ matrix.nodeName || matrix.node }}
                   path: test/junit.xml
             - name: Upload coverage artifacts
               uses: actions/upload-artifact@v3
               if: success() || failure()
               with:
-                  name: test-coverage-${{ matrix.node }}
+                  name: test-coverage-${{ matrix.nodeName || matrix.node }}
                   path: coverage/cobertura-coverage.xml
             - name: Upload coverage reports to Codeclimate
               uses: paambaati/codeclimate-action@v4.0.0
