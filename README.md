@@ -1,5 +1,3 @@
-# Bed & Breakfast Open Source Repository Template
-
 [![NPM Version](https://img.shields.io/npm/v/@bed-and-breakfast/templates-open-source)](https://www.npmjs.com/package/@bed-and-breakfast/templates-open-source)
 [![CI](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/ci.yml)
 [![Release](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/bed-and-breakfast/templates-open-source/actions/workflows/release.yml)
@@ -7,9 +5,11 @@
 [![Code Coverage](https://codeclimate.com/github/bed-and-breakfast/templates-open-source/badges/coverage.svg)](https://codeclimate.com/github/bed-and-breakfast/templates-open-source)
 [![Known Vulnerabilities](https://snyk.io/test/github/bed-and-breakfast/templates-open-source/badge.svg?targetFile=package.json)](https://snyk.io/test/github/bed-and-breakfast/templates-open-source?targetFile=package.json)
 
+# Bed & Breakfast Open Source Repository Template
+
 An out-of-the-box repository with all the necessities to make maintaining a typescript library easy.
 
-## Features
+# Features
 
 -   Complete GitHub CI/CD process
     -   Typescript builds for ESM and CommonJS
@@ -41,13 +41,13 @@ An out-of-the-box repository with all the necessities to make maintaining a type
     -   PR template
     -   CODEOWNERS, CODE_OF_CONDUCT, CONTRIBUTING, LICENSE, SECURITY, SUPPORT
 
-## Getting Started
+# Getting Started
 
 There are two ways
 
 https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 
-### Initialize the repository
+## Initialize the repository
 
 To initialize the new repository
 
@@ -55,7 +55,7 @@ To initialize the new repository
 npx template-init
 ```
 
-### Pulling updates from the template
+## Pulling updates from the template
 
 To keep your repository up to date with the latest version of the template you can
 
@@ -71,8 +71,8 @@ git remote set-url template --push "Thou shalt not push!"
 git pull template main --allow-unrelated-histories
 ```
 
-## Development
+# Development
 
-### Making commits
+## Making commits
 
-### Using commitizen
+## Using commitizen
