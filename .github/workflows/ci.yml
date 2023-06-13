@@ -57,10 +57,14 @@ jobs:
         runs-on: ubuntu-22.04
         strategy:
             matrix:
-                node: [14, 16, 18, lts/*, latest]
+                version: [18, lts/*, latest]
                 include:
-                    - node: lts/*
-                      nodeName: 14
+                    - version: 18
+                      name: 18
+                    - version: lts/*
+                      name: lts
+                    - version: latest
+                      name: latest
         env:
             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         steps:
@@ -69,7 +73,7 @@ jobs:
             - name: Setup Node (${{ matrix.node }})
               uses: './.github/actions/ci-node-setup'
               with:
-                  node-version: ${{ matrix.node }}
+                  node-version: ${{ matrix.version }}
 
             - name: Test (With Coverage)
               run: npm run test:coverage
@@ -77,13 +81,13 @@ jobs:
               uses: actions/upload-artifact@v3
               if: success() || failure()
               with:
-                  name: test-results-${{ matrix.nodeName || matrix.node }}
+                  name: test-results-${{ matrix.name }}
                   path: test/junit.xml
             - name: Upload coverage artifacts
               uses: actions/upload-artifact@v3
               if: success() || failure()
               with:
-                  name: test-coverage-${{ matrix.nodeName || matrix.node }}
+                  name: test-coverage-${{ matrix.name }}
                   path: coverage/cobertura-coverage.xml
             - name: Upload coverage reports to Codeclimate
               uses: paambaati/codeclimate-action@v4.0.0
