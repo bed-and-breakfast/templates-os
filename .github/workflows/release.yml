@@ -8,7 +8,7 @@ on:
         branches: 'main'
 jobs:
     release:
-        if: ${{ (github.event_name == 'workflow_run') && (github.event.workflow_run.conclusion == 'success') }}
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
         name: Release
         runs-on: ubuntu-latest
         permissions:
@@ -41,11 +41,9 @@ jobs:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: npx semantic-release
     no-release:
-        #        if: ${{ (github.event_name != 'pull_request') && (github.event.workflow_run.conclusion == 'failure') }}
+        if: ${{ github.event.workflow_run.conclusion != 'success' }}
         name: No Release
         runs-on: ubuntu-latest
         steps:
-            - name: ECHO
-              run: echo ${{ github.event_name }} && echo ${{ github.ref_name }}
             - name: CI Failure
               run: echo "CI Failure" && exit 1

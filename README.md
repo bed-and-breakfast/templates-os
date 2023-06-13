@@ -29,8 +29,6 @@ git remote set-url template --push "Thou shalt not push!"
 
 TODO: Check image links in md
 
-TODO: Cache build and node modules
-
 TODO: Issue etc templates (Maybe take https://github.com/Josee9988/project-template as a base?)
 
 TODO: Add docs
