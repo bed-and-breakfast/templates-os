@@ -8,7 +8,7 @@ on:
 jobs:
     report:
         name: Coverage Report
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         steps:
             - name: Get coverage artifacts
               uses: dawidd6/action-download-artifact@v2
