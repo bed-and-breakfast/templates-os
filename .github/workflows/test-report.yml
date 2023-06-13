@@ -13,7 +13,7 @@ jobs:
             - name: Create test report
               uses: dorny/test-reporter@v1
               with:
-                  artifact: test-results
+                  artifact: /test-results-(.*)/
                   name: Test Report
                   path: '*.xml'
                   fail-on-error: false
