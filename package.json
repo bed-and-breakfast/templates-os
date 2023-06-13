@@ -120,7 +120,7 @@
     },
     "types": "lib/index.d.ts",
     "devDependencies": {
-        "@bed-and-breakfast/template-init": "1.1.16",
+        "@bed-and-breakfast/template-init": "1.1.17",
         "@commitlint/cli": "17.6.5",
         "@commitlint/config-conventional": "17.6.5",
         "@semantic-release/changelog": "6.0.3",
