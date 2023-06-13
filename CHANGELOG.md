@@ -1,3 +1,17 @@
+## [4.2.9](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.8...v4.2.9) (2023-06-13)
+
+
+### Chores
+
+* **deps:** pin dependency sort-package-json to 2.4.1 ([a9bd92b](https://github.com/bed-and-breakfast/templates-open-source/commit/a9bd92be06a860f6ea816d60b3e3059b9ffa0635))
+
+## [4.2.8](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.7...v4.2.8) (2023-06-13)
+
+
+### Chores
+
+* package.json ([bd9e10d](https://github.com/bed-and-breakfast/templates-open-source/commit/bd9e10d0a6baed4c7fcc788541d7fd5a753cd0c7))
+
 ## [4.2.7](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.6...v4.2.7) (2023-06-13)
 
 ## [4.2.6](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.5...v4.2.6) (2023-06-13)
