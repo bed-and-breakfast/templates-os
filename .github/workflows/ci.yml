@@ -57,7 +57,7 @@ jobs:
         runs-on: ubuntu-22.04
         strategy:
             matrix:
-                node: [14, 16, lts/-1, lts/*, latest]
+                node: [14, 16, 18, lts, latest]
         env:
             CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         steps:
