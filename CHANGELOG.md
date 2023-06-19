@@ -1,3 +1,17 @@
+## [4.2.12](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.11...v4.2.12) (2023-06-19)
+
+
+### Docs
+
+* update docs ([5b700c2](https://github.com/bed-and-breakfast/templates-open-source/commit/5b700c2ad42e35d4b598e24e34370015d25c7c5f))
+* update readme title ([64d6512](https://github.com/bed-and-breakfast/templates-open-source/commit/64d6512781adb94798897c64f7c1f8c108f00cfe))
+* update readme title ([b9648f0](https://github.com/bed-and-breakfast/templates-open-source/commit/b9648f01acab071b08dfb21abd9f9470f985c970))
+* update readme title ([a98619c](https://github.com/bed-and-breakfast/templates-open-source/commit/a98619cd0cf79a63175f2f10c61fdd3ababc7637))
+* update readme title ([893c625](https://github.com/bed-and-breakfast/templates-open-source/commit/893c6258ea7669aceb7f3213cdbad496b2087dcc))
+* update readme title ([0eb1136](https://github.com/bed-and-breakfast/templates-open-source/commit/0eb11360de786bf39248b553ca8d75e1e1d783f5))
+* update readme title ([c7bfe45](https://github.com/bed-and-breakfast/templates-open-source/commit/c7bfe453b8597061c50aa9097d21adf648901f20))
+* update readme title ([99219c7](https://github.com/bed-and-breakfast/templates-open-source/commit/99219c7cda17549ac8b25784828a294c30ca04d1))
+
 ## [4.2.11](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.10...v4.2.11) (2023-06-19)
 
 
