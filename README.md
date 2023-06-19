@@ -5,10 +5,9 @@
 [![Code Coverage](https://codeclimate.com/github/bed-and-breakfast/templates-open-source/badges/coverage.svg)](https://codeclimate.com/github/bed-and-breakfast/templates-open-source)
 [![Known Vulnerabilities](https://snyk.io/test/github/bed-and-breakfast/templates-open-source/badge.svg?targetFile=package.json)](https://snyk.io/test/github/bed-and-breakfast/templates-open-source?targetFile=package.json)
 
-Bed & Breakfast Open Source Repository Template
-===============================================
+# Bed & Breakfast Open Source Repository Template
 
-An out-of-the-box repository with all the necessities to make maintaining a typescript library easy.
+GitHub repository template to make developing typescript packages easier. Creates an out-of-the-box environment for best code practices and project management.
 
 # Features
 
@@ -33,20 +32,18 @@ An out-of-the-box repository with all the necessities to make maintaining a type
     -   Ability to use [comittizen](https://github.com/commitizen/cz-cli) for guided commit messages
 -   Repository management
     -   Automatic PRs for dependency updates ([renovate](https://github.com/renovatebot/renovate))
-    -   Todo issue bot ([todobot](https://github.com/apps/todobot))
-    -   Automatic issue labelling ([issue-label-bot](https://github.com/marketplace/issue-label-bot))
-    -   Stale bot ([stale](https://github.com/actions/stale))
+    -   _Todo issue bot ([todobot](https://github.com/apps/todobot))_
+    -   _Automatic issue labelling ([issue-label-bot](https://github.com/marketplace/issue-label-bot))_
+    -   _Stale bot ([stale](https://github.com/actions/stale))_
 -   Documentation and templates
     -   README stub with configured badges
-    -   Issue templates
-    -   PR template
-    -   CODEOWNERS, CODE_OF_CONDUCT, CONTRIBUTING, LICENSE, SECURITY, SUPPORT
+    -   _Issue templates_
+    -   _PR template_
+    -   _CODEOWNERS, CODE_OF_CONDUCT, CONTRIBUTING, LICENSE, SECURITY, SUPPORT_
 
 # Getting Started
 
-There are two ways
-
-https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+Create a new repository using this template (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
 
 ## Initialize the repository
 
