@@ -1,3 +1,11 @@
+## [4.2.11](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.10...v4.2.11) (2023-06-19)
+
+
+### Chores
+
+* **deps:** update dependency eslint to v8.43.0 ([10b383c](https://github.com/bed-and-breakfast/templates-open-source/commit/10b383ce464bbb4cc4f889a30d75678075a9309f))
+* **deps:** update typescript-eslint monorepo to v5.60.0 ([f98aa98](https://github.com/bed-and-breakfast/templates-open-source/commit/f98aa983ed51c98bad183bab7685a6227826f934))
+
 ## [4.2.10](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.9...v4.2.10) (2023-06-13)
 
 
