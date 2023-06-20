@@ -1,3 +1,10 @@
+## [4.2.13](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.12...v4.2.13) (2023-06-20)
+
+
+### Chores
+
+* add new template-tools ([5312012](https://github.com/bed-and-breakfast/templates-open-source/commit/53120126158749a044d8108c80901d52e4252af8))
+
 ## [4.2.12](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.11...v4.2.12) (2023-06-19)
 
 
