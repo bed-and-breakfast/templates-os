@@ -4,6 +4,8 @@
 [![Code Climate](https://codeclimate.com/github/bed-and-breakfast/templates-open-source/badges/gpa.svg)](https://codeclimate.com/github/bed-and-breakfast/templates-open-source)
 [![Code Coverage](https://codeclimate.com/github/bed-and-breakfast/templates-open-source/badges/coverage.svg)](https://codeclimate.com/github/bed-and-breakfast/templates-open-source)
 [![Known Vulnerabilities](https://snyk.io/test/github/bed-and-breakfast/templates-open-source/badge.svg?targetFile=package.json)](https://snyk.io/test/github/bed-and-breakfast/templates-open-source?targetFile=package.json)
+[![Semantic Release: Conventional Commits](https://img.shields.io/badge/semantic--release-conventional--commits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 # Bed & Breakfast Open Source Repository Template
 
@@ -86,6 +88,14 @@ npx template-pull
 | Check Markdown | `npm run check:md`                                            |
 
 ### Using commitizen
+
+```sh
+npm i -g commitizen
+```
+
+```sh
+npm run commit
+```
 
 # Releasing
 

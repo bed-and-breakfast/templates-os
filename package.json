@@ -30,7 +30,7 @@
     ],
     "config": {
         "commitizen": {
-            "path": "git-cz"
+            "path": "cz-conventional-changelog"
         }
     },
     "publishConfig": {
@@ -39,7 +39,7 @@
     "scripts": {
         "build": "rimraf lib && tsc && tsc -p tsconfig.cjs.json",
         "check:md": "check-all-markdown --no-check-links && markdown-doctest",
-        "commit": "git-cz",
+        "commit": "cz",
         "format": "prettier \"**/*.+(js|ts|json|yml|yaml)\" --check",
         "format:fix": "prettier \"**/*.+(js|ts|json|yml|yaml)\" --write",
         "format:package": "sort-package-json",
@@ -196,6 +196,7 @@
         "@typescript-eslint/eslint-plugin": "5.60.0",
         "@typescript-eslint/parser": "5.60.0",
         "check-all-markdown": "1.4.0",
+        "cz-conventional-changelog": "github:commitizen/cz-conventional-changelog",
         "eslint": "8.43.0",
         "eslint-config-airbnb-typescript": "17.0.0",
         "eslint-config-prettier": "8.8.0",
