@@ -43,34 +43,56 @@ GitHub repository template to make developing typescript packages easier. Create
 
 # Getting Started
 
-Create a new repository using this template (https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+Create a new repository using this [template](https://github.com/bed-and-breakfast/templates-open-source) ([instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)).
 
 ## Initialize the repository
 
-To initialize the new repository
+We can use @bed-and-breakfast/template-tools to initialize the repository. Execute the following command and follow the instructions on the screen.
 
 ```sh
 npx template-init
 ```
 
+## Adding a remote to pull updates
+
+Bed & Breakfast repository templates will be updated over time. Start by setting up a remote with the template-add-remote command.
+
+```sh
+npx template-add-remote
+```
+
 ## Pulling updates from the template
 
-To keep your repository up to date with the latest version of the template you can
+You can then use the following command to pull these changes into an existing repository:
 
 ```sh
-# Add template remote
-git remote add template git@github.com:bed-and-breakfast/templates-open-source.git
-
-# Disables pushes to the remote
-git remote set-url template --push "Thou shalt not push!"
+npx template-pull
 ```
 
-```sh
-git pull template main --allow-unrelated-histories
-```
+> **Note**
+> Be careful resolving conflicts when pulling from a template. Files like package.json, README.md, CHANGELOG.md etc. will have changes you don't want to accept.
 
 # Development
 
 ## Making commits
 
-## Using commitizen
+| Action         | Command                                                       |
+| -------------- | ------------------------------------------------------------- |
+| Build          | `npm run build`                                               |
+| Test           | `npm run test`, `npm run test:coverage`, `npm run test:watch` |
+| Lint           | `npm run lint`, `npm run lint:fix`                            |
+| Format         | `npm run format`, `npm run format:fix`                        |
+| Format Package | `npm run format:package`                                      |
+| Check Markdown | `npm run check:md`                                            |
+
+### Using commitizen
+
+# Releasing
+
+Releasing is completely automated and is as simple as:
+
+```sh
+git push
+```
+
+It will create a new release based on all commits since the last release.
