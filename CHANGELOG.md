@@ -1,3 +1,10 @@
+## [4.2.18](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.17...v4.2.18) (2023-06-20)
+
+
+### Chores
+
+* **deps:** pin dependency @bed-and-breakfast/template-tools to 2.2.8 ([16b8241](https://github.com/bed-and-breakfast/templates-open-source/commit/16b824172aeef6101c13e2121950c025be74221d))
+
 ## [4.2.17](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.16...v4.2.17) (2023-06-20)
 
 
