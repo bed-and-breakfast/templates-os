@@ -1,3 +1,10 @@
+## [4.2.14](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.13...v4.2.14) (2023-06-20)
+
+
+### Chores
+
+* fix commitizen integration ([80b6361](https://github.com/bed-and-breakfast/templates-open-source/commit/80b63615df3eb1ca407cf4706ba0cb3a1b305a1d))
+
 ## [4.2.13](https://github.com/bed-and-breakfast/templates-open-source/compare/v4.2.12...v4.2.13) (2023-06-20)
 
 
